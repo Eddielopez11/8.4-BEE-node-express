@@ -5,6 +5,7 @@ import Home from '../lib/Home'
 
 
 describe("Home", () => {
-
-
+  it("should be a falsy test", () => {
+    expect(true).toBe(true)
+  })
 })
