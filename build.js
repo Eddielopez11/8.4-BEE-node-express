@@ -3,5 +3,5 @@ import { render } from 'react-dom'
 import Home from './lib/Home'
 
 render((
-  <Main name="CCValidation"/>
+  <Home name="CCValidation"/>
 ), document.getElementById('app'))
