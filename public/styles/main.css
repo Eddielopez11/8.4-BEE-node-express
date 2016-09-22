@@ -1,0 +1,454 @@
+@font-face {
+  font-family: bebas-neue;
+  src: url("../assets/fonts/BebasNeue.otf");
+}
+/*
+  COLORS
+  sa yellow: rgb(236, 141, 35);
+  sa pink: rgb(239, 90, 109);
+  sa teal: rgb(1, 163, 165);
+*/
+
+
+/*
+  Main Stylesheet
+*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: helvetica, sans-serif;
+  /*adjust font size to calibrate for rem*/
+  margin: 0 ;
+}
+
+/*
+  Nav Styling
+*/
+
+.nav__wrapper {
+  background-color: white;
+  border-bottom: .1rem solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.3);
+  top: 0;
+  width: 100vw;
+  z-index: 100000;
+}
+
+.nav {
+  height: 12rem;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+  width: 70%;
+
+}
+.nav__logo, .nav__links {
+  display: inline-block;
+  height: 100%;
+  width: 50%;
+}
+
+.nav__linkLogo {
+  height: 10rem;
+  width: 10rem;
+}
+
+.nav__links {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 1rem;
+}
+
+.nav__link {
+  color: black;
+  display: inline-block;
+  letter-spacing: .2rem;
+  line-height: 10rem;
+  height: 6.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  border-bottom: .2rem solid rgb(239, 90, 109);
+}
+
+.nav__link:nth-child(2) {
+  margin: 0 2rem;
+}
+
+
+/*
+  Main Page Styling
+*/
+
+.main__banner {
+  background-image: url("http://www.thesanantonioriverwalk.com/images/site/home_night_banner.jpg");
+  background-size: cover;
+  border-bottom: .3rem solid rgb(1, 163, 165);
+  border-top: .3rem solid rgb(1, 163, 165);
+  height: 40rem;
+  position: relative;
+}
+
+.main__bannerOverlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+}
+
+.main__bannerText {
+  color: rgb(245, 245, 245);
+  display: inline-block;
+  font-family: bebas-neue, helvetica, sans-serif;
+  font-size: 3.2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  letter-spacing: .2rem;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow:
+      3px 3px 0 #000,
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+}
+
+.main__bannerSlogan {
+  font-size: 2rem;
+}
+
+.article__list {
+  background-color: rgb(245, 245, 245);
+  padding: 3rem 25%;
+}
+
+.article__link {
+  display: inline-block;
+  width: 100%;
+}
+
+.article__previews {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border: .1rem solid rgba(0,0,0, 0.2);
+  border-radius: .4rem;
+  box-shadow: 0 .5rem 1rem rgba(50, 50, 50, 0.5);
+  height: 16rem;
+  margin: 3rem auto;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.article__headshot {
+  background-color: rgb(158, 160, 163);
+  height: 100%;
+  width: 100%;
+}
+
+.article__headshotContainer {
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 16rem;
+}
+
+.article__headshotOverlay {
+  background-color: rgba(236, 141, 35, 0.7);
+  display: none;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.headshotOverlay__details {
+  display: inline-block;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+.headshotOverlay__item {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.article__snippet {
+  display: inline-block;
+  font-size: 1.2rem;
+  height: 100%;
+  padding: 2rem;
+  position: relative;
+  vertical-align: top;
+  width: 70%;
+
+}
+
+.article__title {
+  font-family: bebas-neue, helvetica, sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.article__blurb {
+  font-family: helvetica;
+  font-size: 1.4rem;
+  height: 7.5rem;
+  line-height: 1.5rem;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.article__readMore {
+  color: rgb(1, 163, 165);
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  text-decoration: none;
+  transition: letter-spacing 0.6s, color 0.6s;
+}
+
+.article__readMore:hover {
+  color: rgb(239, 90, 109);
+  letter-spacing: .3rem;
+  transition: letter-spacing 0.6s, color 0.6s;
+}
+
+.footer {
+  background-color: rgb(180, 180, 180);
+  height: 21.5rem;
+  padding: 2rem 3rem;
+  width: 100vw;
+}
+
+.footer__aboutUs,.footer__signInOut , .footer__socialMedia {
+  display: inline-block;
+  font-size: 1.4rem;
+  height: 100%;
+  position: relative;
+  vertical-align: top;
+  width: 33.3%;
+}
+
+.footer__heading {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.footer__aboutText {
+  font-size: 1.2rem;
+  text-align: justify;
+  width: 80%;
+}
+
+
+.footer__signIn, .footer__signOut, .footer__linkCreate {
+  appearance: normal;
+  -webkit-appearance: normal;
+  background-color: rgb(219, 50, 54);
+  color: rgb(255, 255, 255);
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.4rem;
+  font-family: helvetica;
+  font-size: 1.2rem;
+  height: 3rem;
+  line-height: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.6s, color 0.6s;
+  width: 15rem;
+}
+
+.footer__signOut {
+  display: none;
+}
+
+.footer__linkCreate {
+  display: none;
+  position: absolute;
+  left: 20rem;
+}
+
+.footer__signIn:hover, .footer__signOut:hover, .footer__linkCreate:hover {
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  color: rgb(219, 50, 54);
+  transition: background-color 0.6s, color 0.6s;
+}
+
+.footer__socialMedia {
+  padding: 2% 0;
+  text-align: right;
+  vertical-align: top;
+}
+
+.footer__socialMediaLink {
+  color: white;
+  display: inline-block;
+  width: 4.5rem;
+}
+
+.footer__socialMediaLink:nth-child(2) {
+  margin: 0 1rem;
+}
+
+
+/*
+  Article styling (detail/blog)
+*/
+
+.articleContainer {
+  margin: 2rem auto;
+  padding: 1rem;
+  position: relative;
+  width: 60%;
+}
+
+.article__header {
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+.article__authorHeadshot {
+  background-color: rgb(158, 160, 163);
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+}
+
+.article__author {
+  display: inline-block;
+  font-family: bebas-neue, helvetica, sans-serif;
+  font-size: 3rem;
+  letter-spacing: .2rem;
+  margin: 0;
+  padding: .7rem;
+  position: absolute;
+  vertical-align: top;
+}
+
+.article__timestamp {
+  font-size: 1.5rem;
+  color: rgb(117, 117, 117);
+  letter-spacing: .2rem;
+  padding: .7rem;
+  position: relative;
+}
+
+.article {
+  line-height: 3.3rem;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+.article__contentTitle {
+  font-family: bebas-neue, helvetica, sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: .2rem;
+}
+
+.article__content {
+  font-size: 2rem;
+  font-family: helvetica;
+}
+/*
+ New Article
+*/
+
+.editorContainer {
+  margin: auto;
+  padding-top: 10rem;
+  width: 60%;
+}
+
+.newArticle__header {
+  letter-spacing: .2rem;
+}
+
+.newArticle__authorpic {
+  background-color: rgb(158, 160, 163);
+  border-radius: 50%;
+  height: 6.5rem;
+  width: 6.5rem;
+}
+
+.newArticle__author {
+  display: inline-block;
+  font-family: bebas-neue, helvetica, sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.editor {
+  letter-spacing: .2rem;
+}
+
+.editor__titleInput {
+  border: .1rem solid lightgrey;
+  border-radius: .4rem;
+  box-shadow: 0 .5rem 1rem rgba(50, 50, 50, 0.5);
+  font-family: bebas-neue;
+  font-size: 4rem;
+  letter-spacing: .2rem;
+  margin: 2rem 0;
+  outline: 0;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.editor__imageInput:focus {
+  border-bottom: .2rem solid rgb(1, 163, 165);
+}
+
+.mdeContainer {
+  border-radius: .4rem;
+  box-shadow: 0 .5rem 1rem rgba(50, 50, 50, 0.5);
+  font-size: 2rem;
+}
+
+.newArticle__footer {
+  text-align: right;
+}
+
+.editor__submit {
+  background-color: white;
+  border: 0;
+  border-radius: .4rem;
+  color: rgb(239, 90, 109);
+  font-family: bebas-neue;
+  font-size: 2rem;
+  letter-spacing: .2rem;
+  margin: 2rem;
+  outline: 0;
+  padding: 1rem;
+  text-decoration: none;
+  transition: background-color .6s;
+}
+
+.editor__submit:hover {
+  background-color: rgb(239, 90, 109);
+  color: white;
+  cursor: pointer;
+  transition: background-color .6s;
+
+}
